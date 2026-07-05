@@ -1,36 +1,52 @@
 
 import streamlit as st
+from pathlib import Path
+
+from components.navbar import navbar
+from components.hero import hero
+from components.metrics import metrics
 
 st.set_page_config(
     page_title="NINIA",
-    page_icon="🛡️",
-    layout="wide"
+    page_icon="🌍",
+    layout="wide",
+    initial_sidebar_state="collapsed"
 )
 
-st.title("🛡️ N I N I A")
+css = Path("styles/theme.css")
 
-st.caption("Conocimiento que protege")
+if css.exists():
+    st.markdown(
+        f"<style>{css.read_text()}</style>",
+        unsafe_allow_html=True
+    )
 
-st.divider()
+st.markdown("""
 
-pregunta = st.text_input(
-    "¿Qué deseas investigar hoy?"
-)
+<style>
 
-if st.button("Investigar"):
+#MainMenu{visibility:hidden;}
+header{visibility:hidden;}
+footer{visibility:hidden;}
 
-    st.success("Próximamente este botón ejecutará el Research Engine.")
+.block-container{
 
-st.divider()
+padding-top:0rem;
+padding-left:0rem;
+padding-right:0rem;
+padding-bottom:3rem;
 
-st.subheader("Estado del proyecto")
+max-width:100%;
 
-st.write("✅ Plataforma iniciada")
+}
 
-st.write("✅ Research Engine integrado")
+</style>
 
-st.write("🚧 Knowledge Package")
+""",unsafe_allow_html=True)
 
-st.write("🚧 Observatorio")
+navbar()
 
-st.write("🚧 NINIA Media")
+hero()
+
+metrics()
+
