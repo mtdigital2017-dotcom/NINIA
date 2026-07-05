@@ -5,17 +5,23 @@ def navbar():
 
     st.markdown("""
 
-<div class="navbar">
+<div class="topbar">
 
 <div class="logo">
 
-🌍 <span>NINIA</span>
+<div class="logo-main">
+NINIA
+</div>
+
+<div class="logo-sub">
+Knowledge Intelligence Platform
+</div>
 
 </div>
 
 <div class="menu">
 
-<a>Inicio</a>
+<a class="active">Inicio</a>
 
 <a>Observatorio</a>
 
@@ -25,12 +31,26 @@ def navbar():
 
 <a>Comparar</a>
 
-<a>NINIA Media</a>
+<a>Tendencias</a>
+
+<a>Media</a>
 
 <a>Academy</a>
 
 </div>
 
+<div class="right">
+
+<input placeholder="Buscar..." />
+
+<div class="avatar">
+JM
 </div>
+
+</div>
+
+</div>
+
+<div class="spacer"></div>
 
 """,unsafe_allow_html=True)

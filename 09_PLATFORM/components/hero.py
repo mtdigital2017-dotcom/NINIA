@@ -5,58 +5,60 @@ def hero():
 
     st.markdown("""
 
-<section class="hero">
+<div class="hero">
 
 <div class="hero-left">
 
-<div class="badge">
-
-INTELIGENCIA • INVESTIGACIÓN • EVIDENCIA
-
+<div class="hero-badge">
+Plataforma Mundial de Inteligencia
 </div>
 
 <h1>
 
-Inteligencia mundial
-para proteger
+Inteligencia mundial<br>
+para proteger<br>
 lo que más importa.
 
 </h1>
 
 <p>
 
-Investigamos.
-Analizamos.
-Comunicamos.
-Transformamos evidencia en conocimiento accionable.
+Investigación • Regulación • IA • Evidencia
 
 </p>
 
-</div>
+<div class="hero-buttons">
 
-<div class="hero-right">
-
-<div class="search-card">
-
-<h3>
-
-¿Qué deseas investigar hoy?
-
-</h3>
-
-<input
-placeholder="Ej. Protección digital infantil, IA generativa, grooming..." />
-
-<button>
-
+<button class="btn-primary">
 Investigar
+</button>
 
+<button class="btn-secondary">
+Explorar
 </button>
 
 </div>
 
 </div>
 
-</section>
+<div class="hero-right">
+
+<div class="search-box">
+
+<h3>
+¿Qué deseas investigar?
+</h3>
+
+<input placeholder="Escribe una pregunta..." />
+
+<button>
+Buscar
+</button>
+
+</div>
+
+</div>
+
+</div>
 
 """,unsafe_allow_html=True)
