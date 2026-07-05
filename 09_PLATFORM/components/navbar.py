@@ -7,50 +7,51 @@ def navbar():
 
 <div class="topbar">
 
+<div class="top-left">
+
 <div class="logo">
 
-<div class="logo-main">
 NINIA
+
 </div>
 
-<div class="logo-sub">
+<div class="subtitle">
+
 Knowledge Intelligence Platform
-</div>
 
 </div>
 
-<div class="menu">
+</div>
 
-<a class="active">Inicio</a>
+<div class="top-center">
 
-<a>Observatorio</a>
-
-<a>Investigar</a>
-
-<a>Biblioteca</a>
-
-<a>Comparar</a>
-
-<a>Tendencias</a>
-
-<a>Media</a>
-
-<a>Academy</a>
+<span>Inicio</span>
+<span>Observatorio</span>
+<span>Investigar</span>
+<span>Biblioteca</span>
+<span>Comparar</span>
+<span>Media</span>
+<span>Academy</span>
 
 </div>
 
-<div class="right">
+<div class="top-right">
 
-<input placeholder="Buscar..." />
+<div class="search">
+
+🔍 Buscar...
+
+</div>
 
 <div class="avatar">
+
 JM
-</div>
 
 </div>
 
 </div>
 
-<div class="spacer"></div>
+</div>
 
 """,unsafe_allow_html=True)
+

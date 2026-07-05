@@ -13,40 +13,53 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-css = Path("styles/theme.css")
+css = Path(__file__).parent / "styles" / "theme.css"
 
 if css.exists():
     st.markdown(
-        f"<style>{css.read_text()}</style>",
+        f"<style>{css.read_text(encoding='utf-8')}</style>",
         unsafe_allow_html=True
     )
 
 st.markdown("""
-
 <style>
 
 #MainMenu{visibility:hidden;}
 header{visibility:hidden;}
 footer{visibility:hidden;}
 
+[data-testid="stHeader"]{
+display:none;
+}
+
+[data-testid="stToolbar"]{
+display:none;
+}
+
+[data-testid="stSidebar"]{
+display:none;
+}
+
 .block-container{
+padding-top:0rem !important;
+padding-bottom:0rem !important;
+padding-left:0rem !important;
+padding-right:0rem !important;
+max-width:100% !important;
+}
 
+div[data-testid="stVerticalBlock"]{
 padding-top:0rem;
-padding-left:0rem;
-padding-right:0rem;
-padding-bottom:3rem;
-
-max-width:100%;
-
 }
 
 </style>
-
 """,unsafe_allow_html=True)
 
 navbar()
 
 hero()
+
+st.markdown("<div style='height:40px'></div>",unsafe_allow_html=True)
 
 metrics()
 
