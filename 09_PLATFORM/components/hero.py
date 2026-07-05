@@ -5,12 +5,12 @@ def hero():
 
     st.markdown("""
 
-<div class="hero">
+<section class="hero">
 
 <div class="hero-left">
 
 <div class="hero-badge">
-Plataforma Mundial de Inteligencia
+🌍 Plataforma Mundial de Inteligencia
 </div>
 
 <h1>
@@ -23,18 +23,44 @@ lo que más importa.
 
 <p>
 
-Investigación • Regulación • IA • Evidencia
+Investigamos políticas públicas.<br>
+Analizamos evidencia científica.<br>
+Transformamos información en decisiones.
 
 </p>
 
-<div class="hero-buttons">
+<div class="hero-search">
 
-<button class="btn-primary">
+<input
+placeholder="¿Qué deseas investigar hoy?"
+>
+
+<button>
+
 Investigar
+
 </button>
 
-<button class="btn-secondary">
-Explorar
+</div>
+
+<div class="hero-actions">
+
+<button>
+
+Observatorio
+
+</button>
+
+<button>
+
+Knowledge Packages
+
+</button>
+
+<button>
+
+Academy
+
 </button>
 
 </div>
@@ -43,22 +69,36 @@ Explorar
 
 <div class="hero-right">
 
-<div class="search-box">
+<div class="feature-card">
 
-<h3>
-¿Qué deseas investigar?
-</h3>
+<div class="feature-tag">
 
-<input placeholder="Escribe una pregunta..." />
+DESTACADO
 
-<button>
-Buscar
-</button>
+</div>
+
+<h2>
+
+Reducir el ciberacoso requiere la participación activa de las familias.
+
+</h2>
+
+<p>
+
+Síntesis de evidencia basada en estudios internacionales.
+
+</p>
+
+<div class="feature-footer">
+
+🌎 38 países · 📄 412 estudios
 
 </div>
 
 </div>
 
 </div>
+
+</section>
 
 """,unsafe_allow_html=True)

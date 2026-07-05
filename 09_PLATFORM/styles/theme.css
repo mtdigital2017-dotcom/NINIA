@@ -28,69 +28,15 @@ max-width:100% !important;
 
 /*--------------------------------*/
 
-.topbar{
 
-position:fixed;
 
-top:0;
 
-left:0;
 
-right:0;
 
-height:72px;
 
-background:#07111F;
 
-display:flex;
 
-align-items:center;
 
-justify-content:space-between;
-
-padding:0 48px;
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
-z-index:9999;
-
-}
-
-.logo{
-
-display:flex;
-
-flex-direction:column;
-
-}
-
-.logo-main{
-
-font-size:28px;
-
-font-weight:800;
-
-color:white;
-
-}
-
-.logo-sub{
-
-font-size:11px;
-
-color:#6EA8FF;
-
-}
-
-.menu{
-
-display:flex;
-
-gap:28px;
-
-align-items:center;
-
-}
 
 .menu a{
 
@@ -120,15 +66,7 @@ font-weight:700;
 
 }
 
-.right{
 
-display:flex;
-
-align-items:center;
-
-gap:18px;
-
-}
 
 .right input{
 
@@ -150,25 +88,7 @@ color:white;
 
 }
 
-.avatar{
 
-width:42px;
-
-height:42px;
-
-border-radius:50%;
-
-background:#2F7CF6;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-weight:700;
-
-}
 
 .spacer{
 
@@ -363,45 +283,11 @@ cursor:pointer;
 
 
 
-.topbar{
 
-display:grid;
 
-grid-template-columns:260px 1fr 240px;
 
-align-items:center;
 
-padding:18px 40px;
 
-background:#081320;
-
-border-bottom:1px solid rgba(255,255,255,.08);
-
-position:sticky;
-
-top:0;
-
-z-index:999;
-
-}
-
-.top-left{
-
-display:flex;
-
-flex-direction:column;
-
-}
-
-.logo{
-
-font-size:30px;
-
-font-weight:800;
-
-color:white;
-
-}
 
 .subtitle{
 
@@ -411,19 +297,7 @@ color:#6EA8FF;
 
 }
 
-.top-center{
 
-display:flex;
-
-justify-content:center;
-
-gap:24px;
-
-font-size:15px;
-
-color:#d7dce3;
-
-}
 
 .top-center span{
 
@@ -437,33 +311,157 @@ color:#49A6FF;
 
 }
 
-.top-right{
+
+
+
+
+
+
+
+
+/*======================================================
+HEADER OFICIAL NINIA
+======================================================*/
+
+.topbar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+right:0;
+
+height:82px;
+
+background:linear-gradient(90deg,#081327,#0b2048);
+
+display:grid;
+
+grid-template-columns:260px auto 340px;
+
+align-items:center;
+
+padding:0 34px;
+
+z-index:99999;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.navbar-space{
+
+height:82px;
+
+}
+
+.logo-title{
+
+font-size:34px;
+
+font-weight:800;
+
+color:white;
+
+letter-spacing:.5px;
+
+}
+
+.logo-sub{
+
+font-size:12px;
+
+color:#76B7FF;
+
+margin-top:-6px;
+
+}
+
+.menu{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+}
+
+.menu a{
+
+color:white;
+
+font-size:15px;
+
+text-decoration:none;
+
+opacity:.85;
+
+transition:.25s;
+
+cursor:pointer;
+
+}
+
+.menu a:hover{
+
+opacity:1;
+
+}
+
+.menu .active{
+
+padding-bottom:28px;
+
+border-bottom:3px solid #25D366;
+
+font-weight:700;
+
+}
+
+.actions{
 
 display:flex;
 
 justify-content:flex-end;
 
-gap:14px;
-
 align-items:center;
+
+gap:16px;
 
 }
 
 .search{
 
-background:#132235;
+width:250px;
 
-padding:10px 18px;
+height:42px;
 
-border-radius:30px;
+border-radius:10px;
 
-color:#8EA5BC;
+border:1px solid rgba(255,255,255,.18);
 
-font-size:14px;
+background:rgba(255,255,255,.08);
 
-min-width:170px;
+padding-left:18px;
 
-text-align:center;
+color:white;
+
+}
+
+.search::placeholder{
+
+color:#B8CAE7;
+
+}
+
+.bell{
+
+font-size:20px;
+
+color:white;
 
 }
 
@@ -475,15 +473,17 @@ height:42px;
 
 border-radius:50%;
 
-background:#2D7EFF;
+background:#4A78FF;
 
 display:flex;
 
-align-items:center;
-
 justify-content:center;
 
+align-items:center;
+
 font-weight:700;
+
+color:white;
 
 }
 

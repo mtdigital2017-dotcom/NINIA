@@ -2,9 +2,7 @@
 import streamlit as st
 from pathlib import Path
 
-from components.navbar import navbar
-from components.hero import hero
-from components.metrics import metrics
+BASE = Path("/content/drive/MyDrive/NINIA/09_PLATFORM")
 
 st.set_page_config(
     page_title="NINIA",
@@ -13,53 +11,24 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-css = Path(__file__).parent / "styles" / "theme.css"
+css = ""
 
-if css.exists():
-    st.markdown(
-        f"<style>{css.read_text(encoding='utf-8')}</style>",
-        unsafe_allow_html=True
-    )
+for archivo in [
+    "base.css",
+    "layout.css",
+    "home.css"
+]:
 
-st.markdown("""
-<style>
+    ruta = BASE/"styles"/archivo
 
-#MainMenu{visibility:hidden;}
-header{visibility:hidden;}
-footer{visibility:hidden;}
+    if ruta.exists():
+        css += ruta.read_text(encoding="utf-8")
 
-[data-testid="stHeader"]{
-display:none;
-}
+st.markdown(
+    f"<style>{css}</style>",
+    unsafe_allow_html=True
+)
 
-[data-testid="stToolbar"]{
-display:none;
-}
+from ui.home import render_home
 
-[data-testid="stSidebar"]{
-display:none;
-}
-
-.block-container{
-padding-top:0rem !important;
-padding-bottom:0rem !important;
-padding-left:0rem !important;
-padding-right:0rem !important;
-max-width:100% !important;
-}
-
-div[data-testid="stVerticalBlock"]{
-padding-top:0rem;
-}
-
-</style>
-""",unsafe_allow_html=True)
-
-navbar()
-
-hero()
-
-st.markdown("<div style='height:40px'></div>",unsafe_allow_html=True)
-
-metrics()
-
+render_home()

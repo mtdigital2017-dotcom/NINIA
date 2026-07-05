@@ -1,0 +1,12 @@
+
+# Google Drive
+*.gdoc
+*.gsheet
+*.gslides
+
+# Python
+__pycache__/
+*.pyc
+
+# Cache
+.ipynb_checkpoints/
