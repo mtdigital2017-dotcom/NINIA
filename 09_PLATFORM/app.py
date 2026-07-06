@@ -1,8 +1,16 @@
 
-import streamlit as st
 from pathlib import Path
+import streamlit as st
+import streamlit.components.v1 as components
 
-BASE = Path("/content/drive/MyDrive/NINIA/09_PLATFORM")
+BASE = Path(__file__).parent
+
+html = (BASE/"frontend"/"index.html").read_text(encoding="utf-8")
+css = (BASE/"frontend"/"css"/"theme.css").read_text(encoding="utf-8")
+js = (BASE/"frontend"/"js"/"app.js").read_text(encoding="utf-8")
+
+html = html.replace("</head>",f"<style>{css}</style></head>")
+html = html.replace("</body>",f"<script>{js}</script></body>")
 
 st.set_page_config(
     page_title="NINIA",
@@ -11,24 +19,8 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-css = ""
-
-for archivo in [
-    "base.css",
-    "layout.css",
-    "home.css"
-]:
-
-    ruta = BASE/"styles"/archivo
-
-    if ruta.exists():
-        css += ruta.read_text(encoding="utf-8")
-
-st.markdown(
-    f"<style>{css}</style>",
-    unsafe_allow_html=True
+components.html(
+    html,
+    height=2500,
+    scrolling=True
 )
-
-from ui.home import render_home
-
-render_home()
