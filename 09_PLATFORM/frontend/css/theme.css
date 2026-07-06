@@ -414,3 +414,158 @@ color:#cdd7e6;
 
 }
 
+
+
+
+/* ===========================
+   HERO V2
+=========================== */
+
+.hero{
+
+max-width:1400px;
+margin:40px auto 0 auto;
+
+display:grid;
+grid-template-columns:1.05fr .95fr;
+
+gap:70px;
+
+align-items:center;
+
+padding:40px 40px 80px 40px;
+
+}
+
+.hero-left{
+
+max-width:650px;
+
+}
+
+.hero-left h1{
+
+font-size:72px;
+font-weight:800;
+line-height:1.05;
+
+margin:22px 0;
+
+letter-spacing:-2px;
+
+}
+
+.hero-left p{
+
+font-size:21px;
+
+line-height:1.75;
+
+color:#B7C6D7;
+
+max-width:560px;
+
+}
+
+.search{
+
+margin-top:35px;
+
+display:flex;
+
+background:white;
+
+border-radius:14px;
+
+overflow:hidden;
+
+box-shadow:0 15px 45px rgba(0,0,0,.18);
+
+}
+
+.search input{
+
+flex:1;
+
+height:64px;
+
+border:none;
+
+padding:0 22px;
+
+font-size:17px;
+
+outline:none;
+
+}
+
+.search button{
+
+width:170px;
+
+background:#2B6CF6;
+
+color:white;
+
+font-weight:700;
+
+border:none;
+
+cursor:pointer;
+
+}
+
+.hero-right{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.featured-card{
+
+width:100%;
+
+max-width:620px;
+
+min-height:560px;
+
+background:linear-gradient(135deg,#1b2941,#263d61);
+
+border-radius:28px;
+
+padding:40px;
+
+box-shadow:0 30px 70px rgba(0,0,0,.30);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:flex-end;
+
+}
+
+.featured-card h2{
+
+font-size:42px;
+
+line-height:1.15;
+
+margin:25px 0;
+
+}
+
+.featured-card p{
+
+font-size:18px;
+
+line-height:1.7;
+
+color:#D6DFEA;
+
+}
+
