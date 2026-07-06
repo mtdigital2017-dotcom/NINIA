@@ -7,79 +7,112 @@ def render_home():
 
 <div class="page">
 
-<header>
+<div class="topbar">
+
+<div class="brand">
 
 <div class="logo">
-
 NINIA
+</div>
+
+<div class="subtitle">
+Conocimiento que protege
+</div>
 
 </div>
 
-<nav>
+<div class="menu">
 
-Inicio
+<a class="active">Inicio</a>
 
-Observatorio
+<a>Observatorio</a>
 
-Investigar
+<a>Investigación</a>
 
-Knowledge
+<a>Biblioteca</a>
 
-Academy
+<a>Tendencias</a>
 
-</nav>
+<a>Academy</a>
 
-<div class="user">
+</div>
 
-🔍
+<div class="actions">
 
-🔔
+<input placeholder="Buscar..." />
 
+<div class="avatar">
 JM
+</div>
 
 </div>
 
-</header>
+</div>
+
 
 <section class="hero">
 
-<div class="left">
+<div class="hero-left">
 
-<span class="badge">
+<div class="badge">
 
 PLATAFORMA MUNDIAL
 
-</span>
+</div>
 
 <h1>
 
-Inteligencia mundial
-para proteger
-lo que más importa.
+Inteligencia mundial<br>
+para proteger<br>
+a niñas, niños y adolescentes
 
 </h1>
 
 <p>
 
-La nueva interfaz de NINIA comienza aquí.
+La primera plataforma que integra inteligencia artificial,
+investigación, regulación y cooperación internacional
+para proteger la niñez en entornos digitales.
 
 </p>
 
-<button>
+<div class="buttons">
+
+<button class="primary">
 
 Comenzar investigación
 
 </button>
 
+<button class="secondary">
+
+Explorar
+
+</button>
+
 </div>
 
-<div class="right">
+</div>
 
-<div class="banner">
+<div class="hero-right">
 
-PRÓXIMAMENTE
+<div class="hero-card">
 
-Banner principal
+<h2>
+
+¿Qué deseas investigar?
+
+</h2>
+
+<input
+placeholder="Ejemplo: Grooming, TikTok, IA..."
+>
+
+<button>
+
+Buscar
+
+</button>
 
 </div>
 
@@ -89,4 +122,4 @@ Banner principal
 
 </div>
 
-""",unsafe_allow_html=True)
+""", unsafe_allow_html=True)
